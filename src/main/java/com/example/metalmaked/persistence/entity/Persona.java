@@ -3,9 +3,13 @@ package com.example.metalmaked.persistence.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.util.Set;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "Persona")
+@Getter
+@Setter
 public class Persona {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,5 +39,6 @@ public class Persona {
     )
     private Set<Rol> roles;
 
-    // Getters y Setters
+    public Persona() {
+    }
 }

@@ -10,7 +10,13 @@ import java.util.List;
 public interface RolMapper {
     RolMapper INSTANCE = Mappers.getMapper(RolMapper.class);
 
+    @Mapping(target = "idRol", source = "idRol")
+    @Mapping(target = "nombreRol", source = "nombreRol")
     RolDTO toRolDTO(Rol rol);
+
+    @Mapping(target = "idRol", source = "idRol")
+    @Mapping(target = "nombreRol", source = "nombreRol")
     Rol toRol(RolDTO rolDTO);
+
     List<RolDTO> toRolDTOs(List<Rol> roles);
 }
